@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0f0b16">
+  <title>Pixel Rush</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Start Screen -->
+  <div id="startScreen" class="screen">
+    <h1 class="game-title">🎨 Pixel Rush</h1>
+    <p class="subtitle">Match the pattern before time runs out!</p>
+    <button id="startBtn" class="btn-primary">Start Game</button>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="gameScreen" class="screen hidden">
+    <header class="game-header">
+      <div class="stat"><span id="levelDisplay">Level 1</span></div>
+      <div class="stat"><span id="timerDisplay">60</span>s</div>
+      <div class="stat"><span id="scoreDisplay">0</span></div>
+    </header>
+
+    <main class="game-area">
+      <div class="canvas-wrapper">
+        <canvas id="gameCanvas"></canvas>
+      </div>
+    </main>
+
+    <footer class="game-footer">
+      <div class="palette" id="palette"></div>
+      <div class="controls">
+        <button id="clearBtn" class="btn-small">Clear</button>
+        <button id="hintBtn" class="btn-small">Hint</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Result Screen -->
+  <div id="resultScreen" class="screen hidden">
+    <h2 id="resultTitle">Level Complete!</h2>
+    <p id="resultScore" class="result-score">Match: 85%</p>
+    <button id="nextBtn" class="btn-primary">Next Level</button>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
